@@ -1,0 +1,1 @@
+﻿INSERT INTO `pagelinks` VALUES (10,0,'B'),(12,0,'A');
