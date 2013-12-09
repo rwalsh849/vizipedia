@@ -10,7 +10,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
 
+import com.google.common.base.Joiner;
+import com.google.common.base.Predicates;
 import com.google.common.collect.HashBiMap;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
 public class WikipediaParser {
@@ -89,7 +92,12 @@ public class WikipediaParser {
 
 		// if we didn't get all the info we were hoping for, abort
 		if (allKeysAsList.size() != argMap.size()) {
-			// TODO abort with error here
+			System.err.println("ERROR: argument(s) "
+					+ Joiner.on(", ").join(
+							Iterables.filter(allKeysAsList, Predicates
+									.not(Predicates.in(argMap.keySet()))))
+					+ " missing from input.");
+			System.exit(1);
 		}
 
 	}
