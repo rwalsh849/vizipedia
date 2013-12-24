@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/projects/libs/guava-15.0.jar">
 		<attributes>
@@ -8,6 +8,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/projects/libs/junit-4.10.jar"/>
-	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
